@@ -122,6 +122,11 @@
   }
 }
 
+html,
+body {
+  height: 100%;
+}
+
 .cybr-btn {
   --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
   --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
