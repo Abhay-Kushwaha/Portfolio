@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+import { BackgroundBeams } from '@/components/ui/background-beams';
 
 const messages = [
   'Welcome to my PORTFOLIO',              // English
@@ -44,10 +45,11 @@ export default function Home() {
 
   return (
     <motion.div
-      className="h-screen w-screen flex items-center justify-center bg-black text-white text-3xl md:text-5xl text-center font-mono"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+    className="h-screen w-screen flex items-center justify-center text-white text-3xl md:text-5xl text-center font-mono"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
     >
+    <BackgroundBeams />
       <motion.span
         key={index}
         initial={{ y: 20, opacity: 0 }}
