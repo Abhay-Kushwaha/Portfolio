@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { Code2, FolderKanban, Briefcase, Mail } from "lucide-react";
 import { Rajdhani } from 'next/font/google';
 
 const rajdhani = Rajdhani({
@@ -59,11 +60,24 @@ const HomePage: React.FC = () => {
         <div>
           <h2 className="text-xl font-semibold mb-2">Start</h2>
           <ul className="space-y-2 text-blue-400">
-            <li><Link href="/vscode/skills">Skills ...</Link></li>
-            <li><Link href="/vscode/projects">Projects ...</Link></li>
-            <li><Link href="/vscode/experience">Experience ...</Link></li>
-            <li><Link href="/vscode/gmail">Get in Touch ...</Link></li>
+            <li className="flex items-center gap-2">
+              <Code2 size={18} />
+              <Link href="/vscode/skills">Skills ...</Link>
+            </li>
+            <li className="flex items-center gap-2">
+              <FolderKanban size={18} />
+              <Link href="/vscode/projects">Projects ...</Link>
+            </li>
+            <li className="flex items-center gap-2">
+              <Briefcase size={18} />
+              <Link href="/vscode/experience">Experience ...</Link>
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail size={18} />
+              <Link href="/vscode/gmail">Get in Touch ...</Link>
+            </li>
           </ul>
+
         </div>
 
         <div>

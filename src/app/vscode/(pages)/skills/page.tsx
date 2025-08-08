@@ -34,7 +34,7 @@ export default function SkillsFloatingDock() {
   const Programming = [
     {
       title: "Java",
-      icon: <IconCup className="h-full w-full text-yellow-400 dark:text-yellow-300" />,
+      icon: <img src="/java.png" alt="Java" className="h-full w-full"/>,
       href: "#java",
     },
     {
@@ -49,7 +49,7 @@ export default function SkillsFloatingDock() {
     },
     {
       title: "Python",
-      icon: <IconBrandPython className="h-full w-full text-yellow-300 dark:text-yellow-200" />,
+      icon: <IconBrandPython className="h-full w-full text-blue-300 dark:text-blue-200" />,
       href: "#python",
     },
   ];
@@ -80,12 +80,12 @@ export default function SkillsFloatingDock() {
   const Backend = [
     {
       title: "Express.js",
-      icon: <IconBrandJavascript className="h-full w-full text-white dark:text-gray-200" />,
+      icon: <img src="/express.png" alt="ExpressJS" className="h-full w-full" />,
       href: "#expressjs",
     },
     {
       title: "Python Flask",
-      icon: <IconFlask className="h-full w-full text-sky-400 dark:text-sky-300" />,
+      icon: <img src="/flask.png" alt="Flask" className="h-full w-full" />,
       href: "#react",
     },
     {
@@ -107,8 +107,8 @@ export default function SkillsFloatingDock() {
       href: "#mongodb",
     },
     {
-      title: "SQL",
-      icon: <IconSql className="h-full w-full text-white dark:text-gray-300" />,
+      title: "My SQL",
+      icon: <img src="/mysql.png" alt="SQL" className="h-full w-full" />,
       href: "#sql",
     },
   ]
@@ -121,7 +121,7 @@ export default function SkillsFloatingDock() {
     },
     {
       title: "Postman",
-      icon: <IconBrandGithubCopilot className="h-full w-full text-orange-400 dark:text-orange-300" />,
+      icon: <img src="/postman.png" alt="Postman" className="h-full w-full" />,
       href: "#postman",
     },
     {

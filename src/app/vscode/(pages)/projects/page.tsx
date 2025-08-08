@@ -7,8 +7,8 @@ import { Rajdhani } from "next/font/google";
 import Link from "next/link";
 
 const rajdhani = Rajdhani({
-  subsets: ['latin'],
-  weight: ['500'],
+    subsets: ['latin'],
+    weight: ['500'],
 });
 
 export default function ProjectsPage() {
@@ -55,57 +55,57 @@ export default function ProjectsPage() {
                 </p>
                 <p className="pt-3">You can check my major projects from here
                     <span className="text-green-400 ml-2 cursor-pointer hover:underline">
-                        <Link href={"https://github.com/Abhay-Kushwaha?tab=repositories"}>Hit me Hard</Link>
+                        <Link href={"https://github.com/Abhay-Kushwaha?tab=repositories"}>Check my Github</Link>
                     </span>
                 </p>
             </div>
 
             {/* Project Grid */}
             {/* <div className="grid gap-10 md:grid-cols-3 sm:grid-cols-2 grid-cols-1"> */}
-                <CardContainer className="inter-var">
-                <CardBody className="bg-[#181818] relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] border-white/[0.3] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+            <CardContainer className="inter-var">
+                <CardBody className="bg-[#181818] relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] border-white/[0.3] w-[30rem] sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                    <CardItem
+                        translateZ="50"
+                        className="text-xl font-bold text-white"
+                    >
+                        title
+                    </CardItem>
+                    <CardItem
+                        as="p"
+                        translateZ="60"
+                        className="text-neutral-400 text-sm max-w-sm mt-2"
+                    >
+                        desc
+                    </CardItem>
+                    <CardItem translateZ="100" className="w-full mt-4">
+                        <img
+                            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            height="1000"
+                            width="1000"
+                            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                            alt="thumbnail"
+                        />
+                    </CardItem>
+                    <div className="flex justify-between items-center mt-20">
                         <CardItem
-                            translateZ="50"
-                            className="text-xl font-bold text-white"
+                            translateZ={20}
+                            as="button"
+                            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                         >
-                            title
+                            TechStacks
                         </CardItem>
                         <CardItem
-                            as="p"
-                            translateZ="60"
-                            className="text-neutral-400 text-sm max-w-sm mt-2"
+                            translateZ={20}
+                            as="a"
+                            href="#"
+                            target="__blank"
+                            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                         >
-                            desc
+                            View Code →
                         </CardItem>
-                        <CardItem translateZ="100" className="w-full mt-4">
-                            <img
-                                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                height="1000"
-                                width="1000"
-                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                                alt="thumbnail"
-                            />
-                        </CardItem>
-                        <div className="flex justify-between items-center mt-20">
-                            <CardItem
-                                translateZ={20}
-                                as="button"
-                                className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-                            >
-                                TechStacks
-                            </CardItem>
-                            <CardItem
-                                translateZ={20}
-                                as="a"
-                                href="#"
-                                target="__blank"
-                                className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-                            >
-                                View Code →
-                            </CardItem>
-                        </div>
-                    </CardBody>
-                </CardContainer>
+                    </div>
+                </CardBody>
+            </CardContainer>
             {/* </div> */}
         </section>
     );

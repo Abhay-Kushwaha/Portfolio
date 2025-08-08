@@ -38,7 +38,7 @@ const Sidebar = () => {
     return (
         <div className="bg-[#252526] text-white flex h-screen">
             {/* Left - File Icon & Avatar */}
-            <div className="bg-[#333333] flex flex-col w-12">
+            <div className="bg-[#333333] flex flex-col w-12 h-screen">
                 <div className="cursor-pointer" onClick={() => setCollapsed((prev) => !prev)}>
                     <Image
                         src="/files.png"
@@ -48,7 +48,7 @@ const Sidebar = () => {
                         className="hover:opacity-80 border-l-2 px-1 py-1"
                     />
                 </div>
-                <div className="mt-auto mb-4">
+                <div className="md:mt-138 mt-115">
                     <Image
                         src="/avatar.png"
                         alt="Avatar"
@@ -102,10 +102,10 @@ const Sidebar = () => {
                             </div>
                             {openSections.sideProjects && (
                                 <ul className="pl-5 mt-1 space-y-1">
-                                    {fileLink("/projects/sanjeevani", "/js.png", "Sanjeevani-AI.js")}
-                                    {fileLink("/projects/askly", "/react.png", "Askly-AI.tsx")}
-                                    {fileLink("/projects/innotracker", "/typescript.png", "InnoTracker.ts")}
-                                    {fileLink("/projects/mockmate", "/js.png", "MockMate-AI.js")}
+                                    {fileLink("/vscode/projects/Sanjeevani-AI", "/js.png", "Sanjeevani-AI.js")}
+                                    {fileLink("/vscode/projects/Askly-AI", "/react.png", "Askly-AI.tsx")}
+                                    {fileLink("/vscode/projects/Innotracker", "/typescript.png", "InnoTracker.ts")}
+                                    {fileLink("/vscode/projects/MockMate-AI", "/js.png", "MockMate-AI.js")}
                                 </ul>
                             )}
                         </div>
