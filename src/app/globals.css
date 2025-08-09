@@ -125,6 +125,8 @@
 html,
 body {
   height: 100%;
+  scrollbar-width: "thin";
+  scrollbar-color: "#555 #333";
 }
 
 .cybr-btn {

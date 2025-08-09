@@ -11,7 +11,7 @@ const Sidebar = () => {
     const [openSections, setOpenSections] = useState<Record<SectionKey, boolean>>({
         about: true,
         sideProjects: true,
-        contact: false,
+        contact: true,
         misc: false,
     });
 
@@ -49,20 +49,22 @@ const Sidebar = () => {
                     />
                 </div>
                 <div className="md:mt-138 mt-115">
-                    <Image
-                        src="/avatar.png"
-                        alt="Avatar"
-                        width={35}
-                        height={35}
-                        className="rounded-full mx-auto"
-                    />
+                    <Link href={'/vscode'}>
+                        <Image
+                            src="/avatar.png"
+                            alt="Avatar"
+                            width={35}
+                            height={35}
+                            className="rounded-full mx-auto"
+                        />
+                    </Link>
                 </div>
             </div>
 
             {/* Right - Expandable Panel */}
             {!collapsed && (
                 <div className="w-64 h-screen flex flex-col justify-between bg-[#252526]">
-                    <div className="flex-1 overflow-y-auto p-3 text-sm space-y-3">
+                    <div className="flex-1 overflow-y-auto p-3 text-sm space-y-3" style={{scrollbarWidth: "thin", scrollbarColor: "#555 #333"}}>
                         <div className="text-xm font-bold text-gray-400 mb-3">EXPLORER</div>
                         {/* About Section */}
                         <div>
@@ -83,6 +85,7 @@ const Sidebar = () => {
                                     {fileLink("/vscode/experience", "/css.png", "experience.css")}
                                     {fileLink("/vscode/skills", "/js.png", "skills.js")}
                                     {fileLink("/vscode/projects", "/typescript.png", "mini-projects.ts")}
+                                    {fileLink("/vscode/hackathons", "/react.png", "hackathons.tsx")}
                                 </ul>
                             )}
                         </div>
@@ -125,7 +128,7 @@ const Sidebar = () => {
                             </div>
                             {openSections.contact && (
                                 <ul className="pl-5 mt-1 space-y-1">
-                                    {fileLink("mailto:email@gmail.com", "/gmail.png", "email@gmail.com")}
+                                    {fileLink("/vscode/email", "/gmail.png", "email@gmail.com")}
                                 </ul>
                             )}
                         </div>
@@ -145,11 +148,11 @@ const Sidebar = () => {
                             </div>
                             {openSections.misc && (
                                 <ul className="pl-5 mt-1 space-y-1">
-                                    {fileLink("/misc/hobbies", "/css.png", "Hobbies.css")}
-                                    {fileLink("/misc/figma", "/react.png", "Figma.ts")}
-                                    {fileLink("/misc/anime", "/js.png", "Anime.js")}
-                                    {fileLink("/misc/sketches", "/typescript.png", "Sketches.tsx")}
-                                    {fileLink("/misc/resume", "/html.png", "Resume.html")}
+                                    {fileLink("/vscode/misc/resume", "/html.png", "Resume.html")}
+                                    {fileLink("/vscode/misc/figma", "/react.png", "Figma.ts")}
+                                    {fileLink("/vscode/misc/hobbies", "/css.png", "Hobbies.css")}
+                                    {fileLink("/vscode/misc/sketches", "/typescript.png", "Sketches.tsx")}
+                                    {fileLink("/vscode/misc/anime", "/js.png", "Anime.js")}
                                 </ul>
                             )}
                         </div>

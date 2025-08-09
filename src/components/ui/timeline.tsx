@@ -48,8 +48,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full font-sans md:px-10"
+      className="w-full font-sans md:px-10 overflow-y-hidden"
       ref={containerRef}
+      style={{ scrollbarWidth: "thin", scrollbarColor: "#555 #333" }}
     >
       <div className="max-w-7xl mx-auto pt-10">
         <h2 className={`text-lg ${rajdhani.className} md:text-6xl mb-4 text-white dark:text-white max-w-4xl`}>
