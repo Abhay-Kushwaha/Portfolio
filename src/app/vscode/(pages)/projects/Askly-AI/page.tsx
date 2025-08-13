@@ -24,14 +24,14 @@ export default function SanjeevaniAIPage() {
                 }}
                 className={`text-center ${rajdhani.className} text-4xl md:text-6xl font-bold text-white`}
             >
-                Sanjeevani.AI
+                Askly.AI
             </motion.h1>
 
             {/* Hero Image */}
             <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-lg">
                 <Image
                     src="/pic.jpeg"
-                    alt="Sanjeevani.AI Preview"
+                    alt="Askly.AI Preview"
                     width={1400}
                     height={100}
                     className="w-full max-h-3xl mt-20 rounded-2xl"
@@ -42,7 +42,7 @@ export default function SanjeevaniAIPage() {
             <div className="mt-[-60] bg-[#0e0e0e] p-6 md:p-10 rounded-xl text-left text-white max-w-4xl mx-auto shadow-2xl space-y-4">
                 <h2 className="text-2xl font-semibold font-rajdhani">Overview</h2>
                 <p>
-                    Sanjeevani.AI is a cutting-edge medical assistant platform designed to help patients
+                    Askly.AI is a cutting-edge medical assistant platform designed to help patients
                     understand symptoms, recommend specialists, and generate prescriptions using AI. Built
                     for scalability and accessibility across rural and urban India.
                 </p>
@@ -65,7 +65,7 @@ export default function SanjeevaniAIPage() {
 
                 <div className="flex gap-4 mt-6">
                     <a
-                        href="https://github.com/your-repo/sanjeevani-ai"
+                        href="https://github.com/your-repo/askly-ai"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-300 transition"
@@ -73,7 +73,7 @@ export default function SanjeevaniAIPage() {
                         GitHub Repo
                     </a>
                     <a
-                        href="https://sanjeevani-ai.vercel.app"
+                        href="https://askly-ai.vercel.app"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-cyan-500 text-white px-4 py-2 rounded-md hover:bg-cyan-600 transition"

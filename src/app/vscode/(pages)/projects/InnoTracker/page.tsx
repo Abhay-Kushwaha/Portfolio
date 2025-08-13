@@ -10,7 +10,7 @@ const rajdhani = Rajdhani({
     weight: ["500"],
 });
 
-export default function MockMateAIPage() {
+export default function InnoTrackerPage() {
     return (
         <LampContainer>
             {/* Project Name */}
@@ -24,14 +24,14 @@ export default function MockMateAIPage() {
                 }}
                 className={`text-center ${rajdhani.className} text-4xl md:text-6xl font-bold text-white`}
             >
-                MockMate.AI
+                Innotracker
             </motion.h1>
 
             {/* Hero Image */}
             <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-lg">
                 <Image
                     src="/pic.jpeg"
-                    alt="MockMate.AI Preview"
+                    alt="Innotracker Preview"
                     width={1400}
                     height={100}
                     className="w-full max-h-3xl mt-20 rounded-2xl"
@@ -42,7 +42,7 @@ export default function MockMateAIPage() {
             <div className="mt-[-60] bg-[#0e0e0e] p-6 md:p-10 rounded-xl text-left text-white max-w-4xl mx-auto shadow-2xl space-y-4">
                 <h2 className="text-2xl font-semibold font-rajdhani">Overview</h2>
                 <p>
-                    mockmate.AI is a cutting-edge medical assistant platform designed to help patients
+                    Innotracker is a cutting-edge medical assistant platform designed to help patients
                     understand symptoms, recommend specialists, and generate prescriptions using AI. Built
                     for scalability and accessibility across rural and urban India.
                 </p>
