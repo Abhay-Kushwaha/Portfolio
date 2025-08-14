@@ -1,6 +1,7 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { PinContainer } from "@/components/ui/3d-pin";
+import Image from "next/image"
 import { Rajdhani } from "next/font/google";
 
 const rajdhani = Rajdhani({
@@ -49,6 +50,17 @@ const designCards: DesignCard[] = [
 ];
 
 export default function FigmaPage() {
+    useEffect(() => {
+        fetch('/api/recent', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: 'Figma',
+                path: '/vscode/misc/figma'
+            })
+        });
+    }, []);
+
     return (
         <section className="min-h-screen md:px-10 md:py-10 flex flex-col text-white">
             <div className="mb-12">
@@ -64,15 +76,18 @@ export default function FigmaPage() {
                 <div className="my-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
                     {designCards.map((card, index) => (
                         <PinContainer key={index} title={card.title} href={card.href}>
-                            <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
+                            <div className="flex basis-full flex-col p-4 tracking-tight border-2 border-white/30 shadow-2xl rounded-2xl text-slate-100/50 w-[20rem] h-[20rem]">
                                 <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
                                     {card.title}
                                 </h3>
                                 <div className="text-base !m-0 !p-0 font-normal">
                                     <span className="text-slate-500">{card.description}</span>
                                 </div>
-                                <img
+                                <Image
                                     className={`flex flex-1 w-full rounded-lg mt-4`}
+                                    alt="Hobbies"
+                                    height={100}
+                                    width={500}
                                     src={`${card.image}`}
                                 />
                             </div>

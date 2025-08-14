@@ -1,13 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconBrandJavascript,
   IconBrandReact,
   IconBrandTailwind,
-  IconDatabase,
-  IconServer,
   IconBrandNextjs,
   IconBrandBootstrap,
   IconBrandGit,
@@ -17,12 +15,10 @@ import {
   IconBrandPython,
   IconBrandTypescript,
   IconBrandVscode,
-  IconSql,
-  IconFlask,
   IconBrandFigma,
   IconBrandGithubCopilot,
-  IconCup,
 } from "@tabler/icons-react";
+import Image from "next/image";
 import { Rajdhani } from "next/font/google";
 
 const rajdhani = Rajdhani({
@@ -30,11 +26,22 @@ const rajdhani = Rajdhani({
   weight: ['500'],
 });
 
-export default function SkillsFloatingDock() {
+export default function SkillsPage() {
+  useEffect(() => {
+              fetch('/api/recent', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                      name: 'Skills',
+                      path: '/vscode/skills'
+                  })
+              });
+  }, []);
+  
   const Programming = [
     {
       title: "Java",
-      icon: <img src="/java.png" alt="Java" className="h-full w-full"/>,
+      icon: <Image src="/java.png" alt="Java" height={50} width={50} className="h-full w-full"/>,
       href: "#java",
     },
     {
@@ -80,12 +87,12 @@ export default function SkillsFloatingDock() {
   const Backend = [
     {
       title: "Express.js",
-      icon: <img src="/express.png" alt="ExpressJS" className="h-full w-full" />,
+      icon: <Image src="/express.png" alt="ExpressJS" height={50} width={50} className="h-full w-full" />,
       href: "#expressjs",
     },
     {
       title: "Python Flask",
-      icon: <img src="/flask.png" alt="Flask" className="h-full w-full" />,
+      icon: <Image src="/flask.png" alt="Flask" height={50} width={50} className="h-full w-full" />,
       href: "#react",
     },
     {
@@ -108,7 +115,7 @@ export default function SkillsFloatingDock() {
     },
     {
       title: "My SQL",
-      icon: <img src="/mysql.png" alt="SQL" className="h-full w-full" />,
+      icon: <Image src="/mysql.png" alt="SQL" height={50} width={50} className="h-full w-full" />,
       href: "#sql",
     },
   ]
@@ -121,7 +128,7 @@ export default function SkillsFloatingDock() {
     },
     {
       title: "Postman",
-      icon: <img src="/postman.png" alt="Postman" className="h-full w-full" />,
+      icon: <Image src="/postman.png" alt="Postman" height={50} width={50} className="h-full w-full" />,
       href: "#postman",
     },
     {
@@ -154,7 +161,7 @@ export default function SkillsFloatingDock() {
         </h1>
         <p className="text-lg mt-4 text-gray-300 text-left font-light max-w-2xl">
           I specialize in building scalable full-stack applications using modern web technologies.
-          From intuitive UIs to robust backend systems and efficient data structures — here's a snapshot of what I work with.
+          From intuitive UIs to robust backend systems and efficient data structures — here&apos;s a snapshot of what I work with.
         </p>
       </div>
 

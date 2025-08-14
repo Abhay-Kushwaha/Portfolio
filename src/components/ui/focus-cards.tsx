@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export const Card = React.memo(
     ({
@@ -23,9 +24,11 @@ export const Card = React.memo(
                 hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
             )}
         >
-            <img
+            <Image
                 src={card.src}
                 alt={card.title}
+                height={500}
+                width={500}
                 className="object-cover w-full h-full transition-transform duration-300 ease-out hover:scale-105 rounded-lg"
             />
             <div

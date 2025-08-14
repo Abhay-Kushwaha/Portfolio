@@ -152,7 +152,7 @@ const Sidebar = () => {
                                     {fileLink("/vscode/misc/figma", "/react.png", "Figma.ts")}
                                     {fileLink("/vscode/misc/hobbies", "/css.png", "Hobbies.css")}
                                     {fileLink("/vscode/misc/sketches", "/typescript.png", "Sketches.tsx")}
-                                    {fileLink("/vscode/misc/anime", "/js.png", "Anime.js")}
+                                    {/* {fileLink("/vscode/misc/anime", "/js.png", "Anime.js")} */}
                                 </ul>
                             )}
                         </div>

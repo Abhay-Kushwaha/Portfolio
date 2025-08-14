@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Contact",
+    "path": "/vscode/email"
+  },
+  {
+    "name": "Experience",
+    "path": "/vscode/experience"
+  },
+  {
+    "name": "Project/MockMate.AI",
+    "path": "/vscode/projects/MockMate-AI"
+  },
+  {
+    "name": "Hackathons",
+    "path": "/vscode/hackathons"
+  },
+  {
+    "name": "Project/InnoTracker",
+    "path": "/vscode/projects/InnoTracker"
+  }
+]

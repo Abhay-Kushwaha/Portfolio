@@ -1,22 +1,22 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 import { BackgroundBeams } from '@/components/ui/background-beams';
 
 const messages = [
-  'Welcome to my PORTFOLIO',              // English
-  'मेरे पोर्टफोलियो में आपका स्वागत है',  // Hindi
-  '¡Bienvenido a mi PORTAFOLIO!',         // Spanish
-  '私のポートフォリオへようこそ',         // Japanese
-  '제 포트폴리오에 오신 것을 환영합니다',   // Korean
+  'Welcome to my PORTFOLIO',               // English
+  'मेरे पोर्टफोलियो में आपका स्वागत है',           // Hindi
+  '¡Bienvenido a mi PORTAFOLIO!',          // Spanish
+  '私のポートフォリオへようこそ',             // Japanese
+  '제 포트폴리오에 오신 것을 환영합니다',     // Korean
 ];
 
 export default function Home() {
   const [index, setIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const [charIndex, setCharIndex] = useState(0);
-  const router = useRouter();
+  // const router = useRouter();
 
   // Typing effect
   useEffect(() => {

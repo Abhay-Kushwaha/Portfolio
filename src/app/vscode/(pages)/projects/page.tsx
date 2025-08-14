@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { Rajdhani } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const rajdhani = Rajdhani({
     subsets: ["latin"],
@@ -12,6 +12,17 @@ const rajdhani = Rajdhani({
 });
 
 export default function ProjectsPage() {
+    useEffect(() => {
+                fetch('/api/recent', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: 'Project',
+                        path: '/vscode/projects'
+                    })
+                });
+    }, []);
+    
     const projects = [
         {
             title: "Visionary OS",

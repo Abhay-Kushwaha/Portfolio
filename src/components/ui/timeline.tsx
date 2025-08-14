@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
@@ -40,7 +39,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const { scrollYProgress } = useScroll({
     target: containerRef,
     // offset: ["start start", "end end"],
-    offset: ["start 0.1", "end 1.995"],
+    offset: ["start 0.1", "end 2.004"],
   });
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
@@ -48,9 +47,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full font-sans md:px-10 overflow-y-hidden"
+      className="w-full font-sans md:px-10"
       ref={containerRef}
-      style={{ scrollbarWidth: "thin", scrollbarColor: "#555 #333" }}
     >
       <div className="max-w-7xl mx-auto pt-10">
         <h2 className={`text-lg ${rajdhani.className} md:text-6xl mb-4 text-white dark:text-white max-w-4xl`}>

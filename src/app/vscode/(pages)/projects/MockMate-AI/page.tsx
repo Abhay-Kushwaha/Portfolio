@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "motion/react";
 import { LampContainer } from "@/components/ui/lamp";
 import Image from "next/image";
@@ -11,6 +11,17 @@ const rajdhani = Rajdhani({
 });
 
 export default function MockMateAIPage() {
+    useEffect(() => {
+            fetch('/api/recent', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: 'Project/MockMate.AI',
+                    path: '/vscode/projects/MockMate-AI'
+                })
+            });
+    }, []);
+    
     return (
         <LampContainer>
             {/* Project Name */}

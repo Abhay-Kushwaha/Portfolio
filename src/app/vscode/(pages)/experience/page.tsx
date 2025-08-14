@@ -1,8 +1,10 @@
-import React from "react";
+"use client"
+
+import React, { useEffect } from "react";
 import { Timeline } from "@/components/ui/timeline";
 import Image from "next/image";
 
-export default function TimelineDemo() {
+export default function ExperiencePage() {
   const data = [
     {
       title: "March,2025 - Present",
@@ -83,6 +85,18 @@ export default function TimelineDemo() {
       ),
     },
   ];
+
+  useEffect(() => {
+    fetch('/api/recent', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: 'Experience',
+        path: '/vscode/experience'
+      })
+    });
+  }, []);
+  
   return (
     <div className="relative w-full overflow-clip">
       <Timeline data={data} />

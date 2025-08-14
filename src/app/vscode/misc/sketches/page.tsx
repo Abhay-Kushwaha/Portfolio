@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { FocusCards } from "@/components/ui/focus-cards";
 import { Rajdhani } from "next/font/google";
 
@@ -36,6 +36,17 @@ const cards = [
 ];
 
 export default function SketchPage() {
+    useEffect(() => {
+        fetch('/api/recent', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: 'Sketches',
+                path: '/vscode/misc/sketches'
+            })
+        });
+    }, []);
+
     return (
         <section className="min-h-screen md:px-10 md:py-10 flex flex-col text-white">
             <div className="mb-12">

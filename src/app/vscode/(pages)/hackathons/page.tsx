@@ -1,8 +1,11 @@
-import React from "react";
+"use client"
+
+import React, { useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Lens } from "@/components/ui/lens";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Rajdhani } from "next/font/google";
+import Image from "next/image";
 
 const rajdhani = Rajdhani({
     subsets: ['latin'],
@@ -28,7 +31,18 @@ const certificates = [
     },
 ];
 
-export default function SpotlightPreview() {
+export default function HackathonsPage() {
+    useEffect(() => {
+        fetch('/api/recent', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: 'Hackathons',
+                path: '/vscode/hackathons'
+            })
+        });
+    }, []);
+    
     return (
         <div className="relative flex w-full rounded-md bg-fixed bg-[radial-gradient(circle,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0.4)_40%,rgba(0,0,0,0.2)_60%,transparent_100%)] [background-repeat:no-repeat] [background-size:100%_100%] antialiased my-[-16px] ml-[-16px]">
             <div
@@ -56,7 +70,7 @@ export default function SpotlightPreview() {
                                 <Lens key={index}>
                                     <div className="w-full relative rounded-2xl overflow-hidden bg-gradient-to-r from-[#1D2235] to-[#121318] p-4 hover:scale-[1.02] transition-transform duration-300 border border-gray-700 shadow-lg">
                                         <div className="relative z-10">
-                                            <img
+                                            <Image
                                                 src={cert.img}
                                                 alt={cert.name}
                                                 width={400}

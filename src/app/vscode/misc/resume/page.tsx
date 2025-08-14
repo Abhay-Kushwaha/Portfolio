@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Rajdhani } from "next/font/google";
-import { Download } from "lucide-react";
 
 const rajdhani = Rajdhani({
     subsets: ["latin"],
@@ -9,7 +8,16 @@ const rajdhani = Rajdhani({
 });
 
 export default function ResumePage() {
-    const resumeUrl = "/resume.pdf";
+    useEffect(() => {
+        fetch('/api/recent', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: 'Resume',
+                path: '/vscode/misc/resume'
+            })
+        });
+    }, []);
 
     return (
         <div className="w-full h-85vh flex flex-col items-center gap-4 pt-4 pl-4 overflow-hidden">
@@ -22,7 +30,7 @@ export default function ResumePage() {
 
             {/* PDF Viewer */}
             <iframe
-                src={resumeUrl}
+                src='/resume.pdf'
                 className="w-full md:w-3/4 h-[60vh] md:h-[73vh] mb-0 border-none rounded-lg shadow-lg"
                 style={{ scrollbarWidth: "thin", scrollbarColor: "#555 #333" }}
                 title="Resume"

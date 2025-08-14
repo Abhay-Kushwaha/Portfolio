@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "motion/react";
 import { LampContainer } from "@/components/ui/lamp";
 import Image from "next/image";
@@ -10,7 +10,18 @@ const rajdhani = Rajdhani({
     weight: ["500"],
 });
 
-export default function SanjeevaniAIPage() {
+export default function AsklyAIPage() {
+    useEffect(() => {
+        fetch('/api/recent', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: 'Project/Askly.AI',
+                path: '/vscode/projects/Askly-AI'
+            })
+        });
+    }, []);
+    
     return (
         <LampContainer>
             {/* Project Name */}
