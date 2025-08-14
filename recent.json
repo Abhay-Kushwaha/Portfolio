@@ -1,22 +1,22 @@
 [
   {
-    "name": "Contact",
-    "path": "/vscode/email"
+    "name": "Project",
+    "path": "/vscode/projects"
   },
   {
-    "name": "Experience",
-    "path": "/vscode/experience"
+    "name": "Sketches",
+    "path": "/vscode/misc/sketches"
   },
   {
-    "name": "Project/MockMate.AI",
-    "path": "/vscode/projects/MockMate-AI"
+    "name": "Hobbies",
+    "path": "/vscode/misc/hobbies"
   },
   {
-    "name": "Hackathons",
-    "path": "/vscode/hackathons"
+    "name": "Figma",
+    "path": "/vscode/misc/figma"
   },
   {
-    "name": "Project/InnoTracker",
-    "path": "/vscode/projects/InnoTracker"
+    "name": "Resume",
+    "path": "/vscode/misc/resume"
   }
 ]

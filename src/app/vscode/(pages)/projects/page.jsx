@@ -13,16 +13,16 @@ const rajdhani = Rajdhani({
 
 export default function ProjectsPage() {
     useEffect(() => {
-                fetch('/api/recent', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        name: 'Project',
-                        path: '/vscode/projects'
-                    })
-                });
+        fetch('/api/recent', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: 'Project',
+                path: '/vscode/projects'
+            })
+        });
     }, []);
-    
+
     const projects = [
         {
             title: "Visionary OS",
