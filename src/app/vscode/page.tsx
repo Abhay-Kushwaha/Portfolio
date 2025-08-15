@@ -34,11 +34,11 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="max-w-5/6 bg-[#1e1e1e] text-white p-6 flex flex-col md:flex-row md:justify-center md:items-center ml-27 mt-13 md:gap-20">
+    <div className="max-w-5/6 bg-[#1e1e1e] text-white md:p-6 flex flex-col md:flex-row md:justify-center md:items-center lg:ml-27 lg:mt-13 gap-20">
       {/* Left Column */}
       <div className="flex flex-col gap-6 w-full md:w-1/2">
         <div>
-          <h1 className={`text-6xl ${rajdhani.className}`}>Abhay Kushwaha</h1>
+          <h1 className={`text-5xl md:text-6xl ${rajdhani.className}`}>Abhay Kushwaha</h1>
           <p className="text-lg text-gray-400 mt-1">Software Development & Designer</p>
         </div>
 

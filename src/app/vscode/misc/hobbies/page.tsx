@@ -14,39 +14,44 @@ const rajdhani = Rajdhani({
 
 const initialItems = [
     {
-        title: "Sketching",
-        image: "/pic.jpeg",
-        className: "absolute top-10 left-[20%] rotate-[-5deg]",
-    },
-    {
-        title: "Movies",
-        image: "/pic.jpeg",
-        className: "absolute top-40 left-[25%] rotate-[-7deg]",
-    },
-    {
-        title: "Tech Exploring",
-        image: "/pic.jpeg",
-        className: "absolute top-5 left-[40%] rotate-[8deg]",
-    },
-    {
-        title: "Listening Music",
-        image: "/pic.jpeg",
-        className: "absolute top-32 left-[55%] rotate-[10deg]",
-    },
-    {
-        title: "Anime",
-        image: "/pic.jpeg",
+        title: "Coffee Adiction",
+        image: "/Hobby_box/coffee.jpg",
         className: "absolute top-20 right-[35%] rotate-[2deg]",
     },
     {
         title: "Travel",
-        image: "/pic.jpeg",
-        className: "absolute top-32 left-[55%] rotate-[10deg]",
+        image: "/Hobby_box/travel.jpg",
+        className: "absolute top-32 left-[5%] rotate-[-20deg]",
+    },
+    {
+        title: "Movies",
+        image: "/Hobby_box/movie.jpg",
+        className: "absolute top-40 left-[55%] rotate-[-7deg]",
+    },
+    {
+        title: "Anime",
+        image: "/Hobby_box/anime.png",
+        className: "absolute top-15 right-[55%] rotate-[-18deg]",
+    },
+    {
+        title: "Sketching",
+        image: "/Hobby_box/draw.jpg",
+        className: "absolute top-50 left-[20%] rotate-[-5deg]",
+    },
+    {
+        title: "Tech Exploring",
+        image: "/Hobby_box/techevent.jpg",
+        className: "absolute top-5 left-[65%] rotate-[8deg]",
+    },
+    {
+        title: "Listening Music",
+        image: "/Hobby_box/music.jpg",
+        className: "absolute top-62 left-[45%] rotate-[10deg]",
     },
     {
         title: "UI Designing",
-        image: "/pic.jpeg",
-        className: "absolute top-20 right-[35%] rotate-[2deg]",
+        image: "/Hobby_box/UI_pic.jpg",
+        className: "absolute top-20 right-[35%] rotate-[20deg]",
     },
 ];
 
@@ -68,9 +73,9 @@ export default function HobbiesPage() {
     };
 
     return (
-        <section className="min-h-screen md:px-10 md:py-10 flex flex-col text-white">
+        <section className="min-h-screen lg:px-10 lg:py-10 flex flex-col text-white">
             <div className="mb-12">
-                <div className="flex justify-between items-center">
+                <div className="max-w-2xl lg:max-w-full flex justify-between items-center">
                     <h1 className={`text-4xl md:text-6xl font-extrabold ${rajdhani.className}`} >
                         My Hobbies
                     </h1>
@@ -81,11 +86,11 @@ export default function HobbiesPage() {
                     </button>
                 </div>
 
-                <p className="text-lg mt-4 text-gray-300 text-left font-light max-w-5xl">
+                <p className="text-lg mt-4 text-gray-300 text-left font-light max-w-xl lg:max-w-4xl">
                     Have a peek into the activities that keep me inspired outside the code editor. This is my Me-time where I explore, learn, and recharge myself. Whether it&apos;s sketching, diving into lectures/movies, or simply enjoying the music.
                 </p>
 
-                <div className="max-w-5xl max-h-lg border-7 shadow-2xl border-white rounded-3xl my-10">
+                <div className="max-w-2xl lg:max-w-5xl max-h-md border-7 shadow-2xl border-white rounded-3xl my-10">
                     <DraggableCardContainer
                         key={key} // re-renders on reset
                         className="relative flex min-h-screen w-full items-center justify-center overflow-clip"
@@ -100,7 +105,7 @@ export default function HobbiesPage() {
                                     alt={item.title}
                                     height={800}
                                     width={500}
-                                    className="pointer-events-none relative z-10 h-80 w-80 object-cover"
+                                    className="pointer-events-none relative z-10 h-40 md:h-80 w-40 md:w-80 object-cover"
                                 />
                                 <h3 className="mt-4 text-center text-2xl font-bold text-neutral-700 dark:text-neutral-300">
                                     {item.title}

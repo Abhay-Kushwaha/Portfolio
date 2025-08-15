@@ -36,9 +36,9 @@ const Sidebar = () => {
     );
 
     return (
-        <div className="bg-[#252526] text-white flex h-screen">
+        <div className="bg-[#252526] text-white flex h-80vh">
             {/* Left - File Icon & Avatar */}
-            <div className="bg-[#333333] flex flex-col w-12 h-screen">
+            <div className="bg-[#333333] flex flex-col justify-between w-12 max-h-50vh">
                 <div className="cursor-pointer" onClick={() => setCollapsed((prev) => !prev)}>
                     <Image
                         src="/files.png"
@@ -48,7 +48,7 @@ const Sidebar = () => {
                         className="hover:opacity-80 border-l-2 px-1 py-1"
                     />
                 </div>
-                <div className="md:mt-138 mt-115">
+                <div className="mb-2">
                     <Link href={'/vscode'}>
                         <Image
                             src="/avatar.png"
@@ -152,7 +152,6 @@ const Sidebar = () => {
                                     {fileLink("/vscode/misc/figma", "/react.png", "Figma.ts")}
                                     {fileLink("/vscode/misc/hobbies", "/css.png", "Hobbies.css")}
                                     {fileLink("/vscode/misc/sketches", "/typescript.png", "Sketches.tsx")}
-                                    {/* {fileLink("/vscode/misc/anime", "/js.png", "Anime.js")} */}
                                 </ul>
                             )}
                         </div>

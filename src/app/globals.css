@@ -135,9 +135,8 @@ body {
   --primary-hue: 0;
   --primary-lightness: 50;
   --color: hsl(0, 0%, 100%);
-  --font-size: 26px;
+  --font-size: 20px;
   --shadow-primary-hue: 180;
-  /* Cyan-like color */
   --label-size: 9px;
   --shadow-secondary-hue: 60;
   --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);

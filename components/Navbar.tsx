@@ -35,7 +35,7 @@ const Navbar = () => {
                     </Link>
                 </div>
             </div>
-            <div className="hidden md:flex justify-center bg-[#4a4949] text-white w-lg border-1 border-white/20 py-1 rounded-md text-xs font-semibold">
+            <div className="hidden lg:flex justify-center bg-[#4a4949] text-white w-lg border-1 border-white/20 py-1 rounded-md text-xs font-semibold">
                 Abhay-Kushwaha(Workspace)
             </div>
             <div className="hover:bg-red-800 hover:text-white items-center justify-center px-3 pt-1 rounded-xs cursor-pointer">

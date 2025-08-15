@@ -1,22 +1,22 @@
 [
   {
-    "name": "Project",
-    "path": "/vscode/projects"
-  },
-  {
-    "name": "Sketches",
-    "path": "/vscode/misc/sketches"
-  },
-  {
-    "name": "Hobbies",
-    "path": "/vscode/misc/hobbies"
-  },
-  {
     "name": "Figma",
     "path": "/vscode/misc/figma"
   },
   {
-    "name": "Resume",
-    "path": "/vscode/misc/resume"
+    "name": "Skills",
+    "path": "/vscode/skills"
+  },
+  {
+    "name": "Experience",
+    "path": "/vscode/experience"
+  },
+  {
+    "name": "Hackathons",
+    "path": "/vscode/hackathons"
+  },
+  {
+    "name": "Hobbies",
+    "path": "/vscode/misc/hobbies"
   }
 ]

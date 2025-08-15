@@ -10,28 +10,52 @@ const rajdhani = Rajdhani({
 
 const cards = [
     {
-        title: "Forest Adventure",
-        src: "/pic.jpeg",
+        title: "Nidhi Narwal",
+        src: "/arts/Nidhi_Narwal.jpg",
     },
     {
-        title: "Valley of life",
-        src: "/git.png",
+        title: "Mother Canvas",
+        src: "/arts/mom.jpg",
     },
     {
-        title: "Sala behta hi jayega",
-        src: "/react.png",
+        title: "Anime Girl",
+        src: "/arts/anime_girl.jpg",
     },
     {
-        title: "Camping is for pros",
-        src: "/pic.jpeg",
+        title: "Anime Guy",
+        src: "/arts/anime_guy.jpg",
     },
     {
-        title: "The road not taken",
-        src: "/pic.jpeg",
+        title: "Spiderman",
+        src: "/arts/spidy.jpg",
     },
     {
-        title: "The First Rule",
-        src: "/pic.jpeg",
+        title: "Tom Holland",
+        src: "/arts/holland.jpg",
+    },
+    {
+        title: "Naruto Uzumaki",
+        src: "/arts/naruto.jpg",
+    },
+    {
+        title: "Saturo Gojo",
+        src: "/arts/gojo.jpg",
+    },
+    {
+        title: "Naoya Zenin",
+        src: "/arts/ishida.jpg",
+    },
+    {
+        title: "Jungkook",
+        src: "/arts/JK.webp",
+    },
+    {
+        title: "Itachi Uchiha",
+        src: "/arts/itachi.jpg",
+    },
+    {
+        title: "Anime Girl",
+        src: "/arts/girl.jpg",
     },
 ];
 
@@ -48,8 +72,8 @@ export default function SketchPage() {
     }, []);
 
     return (
-        <section className="min-h-screen md:px-10 md:py-10 flex flex-col text-white">
-            <div className="mb-12">
+        <section className="min-h-screen lg:px-10 lg:py-10 flex flex-col text-white">
+            <div className="mb-12 max-w-2xl lg:max-w-full">
                 <h1 className={`text-4xl md:text-6xl font-extrabold ${rajdhani.className}`}>
                     My Sketches
                 </h1>
