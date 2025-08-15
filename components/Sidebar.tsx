@@ -105,9 +105,9 @@ const Sidebar = () => {
                             </div>
                             {openSections.sideProjects && (
                                 <ul className="pl-5 mt-1 space-y-1">
+                                    {fileLink("/vscode/projects/CruxCRM", "/typescript.png", "CruxCRM.ts")}
                                     {fileLink("/vscode/projects/Sanjeevani-AI", "/js.png", "Sanjeevani-AI.js")}
                                     {fileLink("/vscode/projects/Askly-AI", "/react.png", "Askly-AI.tsx")}
-                                    {fileLink("/vscode/projects/InnoTracker", "/typescript.png", "InnoTracker.ts")}
                                     {fileLink("/vscode/projects/MockMate-AI", "/js.png", "MockMate-AI.js")}
                                 </ul>
                             )}

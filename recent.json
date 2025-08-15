@@ -1,22 +1,22 @@
 [
   {
-    "name": "Figma",
-    "path": "/vscode/misc/figma"
+    "name": "Project/Askly-AI",
+    "path": "/vscode/projects/Askly-AI"
   },
   {
-    "name": "Skills",
-    "path": "/vscode/skills"
+    "name": "Project/CruxCRM",
+    "path": "/vscode/projects/CruxCRM"
   },
   {
-    "name": "Experience",
-    "path": "/vscode/experience"
+    "name": "Project/Sanjeevani-AI",
+    "path": "/vscode/projects/Sanjeevani-AI"
   },
   {
-    "name": "Hackathons",
-    "path": "/vscode/hackathons"
+    "name": "Project/MockMate-AI",
+    "path": "/vscode/projects/MockMate-AI"
   },
   {
-    "name": "Hobbies",
-    "path": "/vscode/misc/hobbies"
+    "name": "Sketches",
+    "path": "/vscode/misc/sketches"
   }
 ]
